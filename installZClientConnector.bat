@@ -1,6 +1,6 @@
 @echo off
 rem PURPOSE: 	This bat is designed to download and install zscaler client connector automatically for govcloud tenants
-rem LIMITS:		This file will not handle EXE installs and is suitible for Windows only. Not intended for VDI either
+rem LIMITS:	This file will not handle EXE installs and is suitible for Windows only. Not intended for VDI either
 rem CREDIT: 	bradley.cooper@zscaler.com
 rem VERSION:	2023.09.06
 
@@ -86,11 +86,11 @@ if %QUIETMODE%==1 (
 ) else (
 	set QUIET=
 )
-set options = "%QUIET% CLOUDNAME=%CLOUDNAME% POLICYTOKEN=%POLICYTOKEN% STRICTENFORCEMENT=%STRICTENFORCEMENT% USERDOMAIN=%USERDOMAIN% REINSTALLDRIVER=%REINSTALLDRIVER%"
+set "options=%QUIET% CLOUDNAME=%CLOUDNAME% POLICYTOKEN=%POLICYTOKEN% STRICTENFORCEMENT=%STRICTENFORCEMENT% USERDOMAIN=%USERDOMAIN% REINSTALLDRIVER=%REINSTALLDRIVER%"
 
 rem Install Zscaler Client Connector with org parameters
 echo installing Zscaler Client Connector...
-msiexec /i "%msiPath%" %options%
+msiexec /i %msiPath% %options%
 
 rem Check the exit code of msiexec
 if %errorlevel% equ 0 (
