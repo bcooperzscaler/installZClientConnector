@@ -1,6 +1,7 @@
 @echo off
 rem PURPOSE: 	This bat is designed to download and install zscaler client connector automatically for govcloud tenants
 rem LIMITS:	This file will not handle EXE installs and is suitible for Windows only. Not intended for VDI either
+rem DISCLAIMER: This script is provided without any warrant or guarantee of its functionality. Use at your own risk.
 rem CREDIT: 	bradley.cooper@zscaler.com
 rem VERSION:	2023.09.06
 
